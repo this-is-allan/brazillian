@@ -3,8 +3,8 @@ import 'package:documentos_brasil/documentos-brasil.dart';
 main(List<String> arguments) {
   // print(documentosBrasil.cpf.isValid("07909912412"));
   // print(documentosBrasil.cpf.isValid("07932312109912412"));
-  print(documentosBrasil.cpf.isValid("07909912412"));
-  print(documentosBrasil.cpf.isValid("079.099.124-12"));
+  // print(documentosBrasil.cpf.isValid("07909912412"));
+  // print(documentosBrasil.cpf.isValid("079.099.124-12"));
   // print(documentosBrasil.cpf.isValid("079.099.124-12"));
 
   // print(documentosBrasil.cpf.isValid("079.099.124-12"));
@@ -19,7 +19,8 @@ main(List<String> arguments) {
   // print(documentosBrasil.cnpj.validate("73858597000183"));
   // print(documentosBrasil.cnpj.validate("05930566000136"));
   // print(documentosBrasil.cnpj.validate("74032081000148"));
-  // print(documentosBrasil.cnpj.validate("42.256.429/0001-94"));
-  // print(documentosBrasil.cnpj.validate("73858597000183"));
-  // print(documentosBrasil.cnpj.validate("52505752000108"));
+  print(documentosBrasil.cnpj.isValid("42.256.429/0001-94"));
+  print(documentosBrasil.cnpj.isValid("42256429000194"));
+  print(documentosBrasil.cnpj.isValid("73858597000183"));
+  print(documentosBrasil.cnpj.isValid("52505752000108"));
 }
