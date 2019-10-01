@@ -10,7 +10,7 @@ main(List<String> arguments) {
   // print(documentosBrasil.cpf.isValid("079.099.124-12"));
   // print(documentosBrasil.cpf.isValid("99999999999"));
   // print(documentosBrasil.cpf.isValid("12345678909"));
-  print(documentosBrasil.cpf.format("07909912412"));
+  // print(documentosBrasil.cpf.format("07909912412"));
 
   // CPNPJ
   // print(documentosBrasil.cnpj.validate("44.136.385/0001-94"));
@@ -24,4 +24,8 @@ main(List<String> arguments) {
   // print(documentosBrasil.cnpj.isValid("42256429000194"));
   // print(documentosBrasil.cnpj.isValid("73858597000183"));
   // print(documentosBrasil.cnpj.isValid("52505752000108"));
+
+  print(documentosBrasil.cnpj.format("56.730.026/0001-40"));
+  print(documentosBrasil.cnpj.format("56730026000140"));
+  print(documentosBrasil.cnpj.format("48222543000180"));
 }
