@@ -1,3 +1,5 @@
+const format = const Format();
+
 class Format {
   const Format();
 
