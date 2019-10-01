@@ -1,2 +1,2 @@
 # documentos-brasil
-#### Generate e validate Brazillian documents
+#### Generate and validate Brazillian documents
