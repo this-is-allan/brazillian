@@ -1,5 +1,4 @@
 import 'dart:math';
-import '../format.dart';
 import '../check_digits/cpf_check_digits.dart';
 
 class CpfGenerator {

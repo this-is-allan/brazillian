@@ -1,9 +1,9 @@
 import '../format.dart';
 
 class CnpjCheckDigits {
-  final String cpf;
+  final String cnpj;
 
-  CnpjCheckDigits(this.cpf);
+  CnpjCheckDigits(this.cnpj);
 
   static checkFirstDigit(cnpj) {
     String _cnpjFormatted = format.removeSymbols(cnpj);

@@ -25,7 +25,10 @@ main(List<String> arguments) {
   // print(documentosBrasil.cnpj.isValid("42.256.429/0001-94"));
   // print(documentosBrasil.cnpj.isValid("42256429000194"));
   // print(documentosBrasil.cnpj.isValid("63858597000183"));
-  print(documentosBrasil.cnpj.isValid("52505752000108"));
+  // print(documentosBrasil.cnpj.isValid("52505752000108"));
+  for (var i = 0; i < 5; i++) {
+    print(documentosBrasil.cnpj.generate());
+  }
 
   // print(documentosBrasil.cnpj.format("56.730.026/0001-40"));
   // print(documentosBrasil.cnpj.format("56730026000140"));
