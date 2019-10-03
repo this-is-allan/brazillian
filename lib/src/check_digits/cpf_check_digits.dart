@@ -6,7 +6,7 @@ class CpfCheckDigits {
   CpfCheckDigits(this.cpf);
 
   static checkFirstDigit(cpf) {
-    String _cpfFormatted = format.removeSymbols(cpf);
+    String _cpfFormatted = Format.removeSymbols(cpf);
     int _sum = 0;
     int _mod = 0;
 
@@ -21,7 +21,7 @@ class CpfCheckDigits {
   }
 
   static checkSecondDigit(cpf) {
-    String _cpfFormatted = format.removeSymbols(cpf);
+    String _cpfFormatted = Format.removeSymbols(cpf);
     int _sum = 0;
     int _mod = 0;
 

@@ -6,7 +6,7 @@ class CnpjCheckDigits {
   CnpjCheckDigits(this.cnpj);
 
   static checkFirstDigit(cnpj) {
-    String _cnpjFormatted = format.removeSymbols(cnpj);
+    String _cnpjFormatted = Format.removeSymbols(cnpj);
     int sum = 0;
     int mod = 0;
     int multiplicar = 5;
@@ -28,7 +28,7 @@ class CnpjCheckDigits {
   }
 
   static checkSecondDigit(cnpj) {
-    String _cnpjFormatted = format.removeSymbols(cnpj);
+    String _cnpjFormatted = Format.removeSymbols(cnpj);
     int sum = 0;
     int mod = 0;
     int multiplicar = 6;

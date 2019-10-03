@@ -1,11 +1,11 @@
 import 'validators/cpf_validator.dart';
-import 'formatters/cpf_formatter.dart';
 import 'generators/cpf_generator.dart';
+import 'format.dart';
 
 class Cpf {
   bool isValid(cpf) => CpfValidator.check(cpf);
 
-  String format(cpf) => CpfFormatter.mask(cpf);
+  String format(cpf) => Format.cpf(cpf);
 
   String generate() => CpfGenerator.generateCpf();
 }

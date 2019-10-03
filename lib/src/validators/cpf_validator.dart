@@ -7,7 +7,7 @@ class CpfValidator {
   CpfValidator(this.cpf);
 
   static bool check(String cpf) {
-    String _cpfFormatted = format.removeSymbols(cpf);
+    String _cpfFormatted = Format.removeSymbols(cpf);
     int firstDigit = CpfCheckDigits.checkFirstDigit(cpf);
     int secondDigit = CpfCheckDigits.checkSecondDigit(cpf);
 

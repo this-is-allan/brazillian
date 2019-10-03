@@ -7,7 +7,7 @@ class CnpjValidator {
   CnpjValidator(this.cnpj);
 
   static bool check(String cnpj) {
-    String _cnpjFormatted = format.removeSymbols(cnpj);
+    String _cnpjFormatted = Format.removeSymbols(cnpj);
     int firstDigit = CnpjCheckDigits.checkFirstDigit(cnpj);
     int secondDigit = CnpjCheckDigits.checkSecondDigit(cnpj);
 

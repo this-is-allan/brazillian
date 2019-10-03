@@ -1,5 +1,5 @@
 import 'dart:math';
-import '../formatters/cnpj_formatter.dart';
+import '../format.dart';
 import '../check_digits/cnpj_check_digits.dart';
 
 class CnpjGenerator {
@@ -19,7 +19,7 @@ class CnpjGenerator {
     fakeCnpj += CnpjCheckDigits.checkSecondDigit(fakeCnpj).toString();
 
     if (formatted) {
-      return CnpjFormatter.mask(fakeCnpj);
+      return Format.cnpj(fakeCnpj);
     } else {
       return fakeCnpj;
     }
