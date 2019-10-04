@@ -1,5 +1,5 @@
 import '../format.dart';
-import '../check_digits/cpf_check_digits.dart';
+import '../check_digit.dart';
 
 class CpfValidator {
   final String cpf;
@@ -7,14 +7,12 @@ class CpfValidator {
   CpfValidator(this.cpf);
 
   static bool check(String cpf) {
-    String _cpfFormatted = Format.removeSymbols(cpf);
-    int firstDigit = CpfCheckDigits.checkFirstDigit(cpf);
-    int secondDigit = CpfCheckDigits.checkSecondDigit(cpf);
+    final String _cpfFormatted = Format.removeSymbols(cpf);
+    final String cpfDigits = CheckDigit.cpf(cpf);
 
     if (_cpfFormatted.length != 11) return false;
+    if (_cpfFormatted.substring(9, 11) != cpfDigits) return false;
 
-    if (firstDigit != int.parse(_cpfFormatted.substring(9, 10))) return false;
-    if (secondDigit != int.parse(_cpfFormatted.substring(10, 11))) return false;
     return true;
   }
 }

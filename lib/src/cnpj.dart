@@ -6,7 +6,8 @@ class Cnpj {
   CnpjGenerator cnpjGenerator = CnpjGenerator();
 
   bool isValid(cnpj) => CnpjValidator.check(cnpj);
+
   String format(cnpj) => Format.cnpj(cnpj);
-  String generate([bool formatted = false]) =>
-      cnpjGenerator.generate(formatted);
+
+  String generate() => cnpjGenerator.generate();
 }

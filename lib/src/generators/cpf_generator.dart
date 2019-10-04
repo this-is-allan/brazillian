@@ -1,5 +1,5 @@
 import 'dart:math';
-import '../check_digits/cpf_check_digits.dart';
+import '../check_digit.dart';
 
 class CpfGenerator {
   CpfGenerator();
@@ -14,8 +14,7 @@ class CpfGenerator {
       fakeCpf += (min + rng.nextInt(max - min)).toString();
     }
 
-    fakeCpf += CpfCheckDigits.checkFirstDigit(fakeCpf).toString();
-    fakeCpf += CpfCheckDigits.checkSecondDigit(fakeCpf).toString();
+    fakeCpf += CheckDigit.cpf(fakeCpf).toString();
 
     return fakeCpf;
   }
