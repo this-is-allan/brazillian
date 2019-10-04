@@ -72,7 +72,7 @@ class CheckDigit {
         _multiplicar--;
       }
     } else {
-      for (var i = 1; i <= 12; i++) {
+      for (var i = 1; i <= 13; i++) {
         if (_multiplicar < 2) _multiplicar = 9;
         _sum =
             _sum + int.parse(_cnpjFormatted.substring(i - 1, i)) * _multiplicar;
