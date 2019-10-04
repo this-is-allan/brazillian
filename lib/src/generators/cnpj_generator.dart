@@ -1,10 +1,11 @@
 import 'dart:math';
 import '../check_digit.dart';
+import '../format.dart';
 
 class CnpjGenerator {
   CnpjGenerator();
 
-  String generate() {
+  String generate(formatted) {
     var rng = new Random();
     int min = 100;
     int max = 999;
@@ -16,6 +17,6 @@ class CnpjGenerator {
 
     fakeCnpj += CheckDigit.cnpj(fakeCnpj).toString();
 
-    return fakeCnpj;
+    return formatted ? Format.cnpj(fakeCnpj) : fakeCnpj;
   }
 }

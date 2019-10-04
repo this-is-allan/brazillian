@@ -6,10 +6,10 @@ main(List<String> arguments) {
   // print(documentosBrasil.cpf.format(documentosBrasil.cpf.generate()));
   // print(documentosBrasil.cpf.isValid(documentosBrasil.cpf.generate()));
   // print(documentosBrasil.cpf.isValid("07909912412"));
-  // for (var i = 0; i < 25; i++) {
-  // print(documentosBrasil.cpf.generate());
-  // print(documentosBrasil.cpf.isValid(documentosBrasil.cpf.generate()));
-  // }
+  for (var i = 0; i < 5; i++) {
+    print(documentosBrasil.cpf.generate());
+    // print(documentosBrasil.cpf.isValid(documentosBrasil.cpf.generate()));
+  }
 
   // print("");
 

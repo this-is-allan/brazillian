@@ -9,5 +9,5 @@ class Cnpj {
 
   String format(cnpj) => Format.cnpj(cnpj);
 
-  String generate() => cnpjGenerator.generate();
+  String generate([formatted = false]) => cnpjGenerator.generate(formatted);
 }

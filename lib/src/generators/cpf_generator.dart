@@ -1,10 +1,11 @@
 import 'dart:math';
 import '../check_digit.dart';
+import '../format.dart';
 
 class CpfGenerator {
   CpfGenerator();
 
-  static String generateCpf() {
+  static String generateCpf([formatted]) {
     var rng = new Random();
     int min = 100;
     int max = 999;
@@ -16,6 +17,6 @@ class CpfGenerator {
 
     fakeCpf += CheckDigit.cpf(fakeCpf).toString();
 
-    return fakeCpf;
+    return formatted ? Format.cpf(fakeCpf) : fakeCpf;
   }
 }

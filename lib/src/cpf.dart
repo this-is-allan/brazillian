@@ -7,5 +7,5 @@ class Cpf {
 
   String format(cpf) => Format.cpf(cpf);
 
-  String generate() => CpfGenerator.generateCpf();
+  String generate([formatted = false]) => CpfGenerator.generateCpf(formatted);
 }
