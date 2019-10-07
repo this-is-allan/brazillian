@@ -5,5 +5,9 @@ dart:
 
 script: ./tool/travis.sh
 
+before_install:
+  - chmod +x ./tool/travis.sh
+
+
 notifications:
   email: false
