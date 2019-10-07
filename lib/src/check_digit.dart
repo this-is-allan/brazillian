@@ -7,8 +7,9 @@ class CheckDigit {
     int sum = 0;
     int mod = 0;
 
-    for (var i = 1; i <= 9; i++)
+    for (var i = 1; i <= 9; i++) {
       sum = sum + int.parse(_cpf.substring(i - 1, i)) * (11 - i);
+    }
 
     mod = (sum * 10) % 11;
 
@@ -20,11 +21,13 @@ class CheckDigit {
     mod = 0;
 
     if (_cpf.length == 10) {
-      for (var i = 1; i <= 10; i++)
+      for (var i = 1; i <= 10; i++) {
         sum = sum + int.parse(_cpf.substring(i - 1, i)) * (12 - i);
+      }
     } else {
-      for (var i = 1; i <= 10; i++)
+      for (var i = 1; i <= 10; i++) {
         sum = sum + int.parse(_cpf.substring(i - 1, i)) * (12 - i);
+      }
     }
 
     mod = (sum * 10) % 11;
