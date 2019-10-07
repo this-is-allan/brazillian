@@ -41,3 +41,9 @@ main() {
   // 00.000.000/0001-00
 }
 ```
+
+## Features and bugs
+
+Please file feature requests and bugs at the [issue tracker][tracker].
+
+[tracker]: https://github.com/allancarlos123/brazillian/issues
