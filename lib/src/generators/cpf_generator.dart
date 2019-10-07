@@ -5,8 +5,6 @@ import '../validators/cpf_validator.dart';
 import '../check_digit.dart';
 
 class CpfGenerator extends Cpf {
-  CpfGenerator();
-
   static String generateCpf(formatted, invalid) {
     var rng = new Random();
     int min = 100;

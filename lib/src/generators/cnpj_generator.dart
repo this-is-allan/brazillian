@@ -5,8 +5,6 @@ import '../validators/cnpj_validator.dart';
 import '../check_digit.dart';
 
 class CnpjGenerator extends Cnpj {
-  CnpjGenerator();
-
   static String generateCnpj(formatted, invalid) {
     var rng = new Random();
     int min = 100;
