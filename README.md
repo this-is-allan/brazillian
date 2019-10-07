@@ -1,4 +1,6 @@
 # Brazillian Data
+[![Build Status](https://travis-ci.org/allancarlos123/brazillian.svg?branch=master)](https://travis-ci.org/allancarlos123/brazillian)
+[![Coverage Status](https://coveralls.io/repos/github/allancarlos123/brazillian/badge.svg?branch=master)](https://coveralls.io/github/allancarlos123/brazillian?branch=master)
 
 A library for Dart that generates fake Brazillian data.
 
