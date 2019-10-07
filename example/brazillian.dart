@@ -3,15 +3,27 @@ library brazillian.example;
 import 'package:brazillian/brazillian.dart';
 
 main() {
-  String fakeCPF;
-  for (var i = 0; i < 2; i++) {
-    fakeCPF = brazillian.cpf.generate();
-    print('$fakeCPF -> ${brazillian.cpf.format(fakeCPF)}');
-  }
+  // [CPF]
+  // Generate a valid CPF
+  print(brazillian.cpf.generate());
+  // Generate a invalid CPF
+  print(brazillian.cpf.generate(invalid: true));
+  // Generate a formatted CPF
+  print(brazillian.cpf.generate(formatted: true));
+  // Validates the generated CPF
+  print(brazillian.cpf.isValid(brazillian.cpf.generate()));
+  // Formats a generated CPF
+  print(brazillian.cpf.format(brazillian.cpf.generate()));
 
-  String fakeCNPJ;
-  for (var i = 0; i < 2; i++) {
-    fakeCNPJ = brazillian.cnpj.generate();
-    print('$fakeCNPJ -> ${brazillian.cnpj.format(fakeCNPJ)}');
-  }
+  // [CNPJ]
+  // Generate a valid CPF
+  print(brazillian.cnpj.generate());
+  // Generate a invalid CPF
+  print(brazillian.cnpj.generate(invalid: true));
+  // Generate a formatted CPF
+  print(brazillian.cnpj.generate(formatted: true));
+  // Validates the generated CPF
+  print(brazillian.cnpj.isValid(brazillian.cnpj.generate()));
+  // Formats a generated CPF
+  print(brazillian.cnpj.format(brazillian.cnpj.generate()));
 }
