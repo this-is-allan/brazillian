@@ -1,13 +1,9 @@
 language: dart
 
 dart:
-  - dev
   - stable
 
 script: ./tool/travis.sh
 
 notifications:
   email: false
-
-before_install:
-  - chmod +x build.sh
