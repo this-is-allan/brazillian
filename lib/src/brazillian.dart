@@ -1,9 +1,9 @@
 import 'cpf.dart';
 import 'cnpj.dart';
 
-DocumentosBrasil documentosBrasil = DocumentosBrasil();
+Brazillian brazillian = Brazillian();
 
-class DocumentosBrasil {
+class Brazillian {
   final Cpf cpf = Cpf();
   final Cnpj cnpj = Cnpj();
 }

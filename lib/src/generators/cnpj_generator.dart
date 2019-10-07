@@ -1,36 +1,33 @@
 import 'dart:math';
+import 'package:brazillian/brazillian.dart';
+
 import '../validators/cnpj_validator.dart';
 import '../check_digit.dart';
-import '../format.dart';
 
-// import '../cnpj.dart';
-
-class CnpjGenerator {
+class CnpjGenerator extends Cnpj {
   CnpjGenerator();
 
-  String generate(formatted, invalid) {
+  static String generateCnpj(formatted, invalid) {
     var rng = new Random();
-    bool isValid;
     int min = 100;
     int max = 999;
-    String fakeCnpj = "";
+    String cnpj = "";
 
     for (var i = 1; i < 5; i++) {
-      fakeCnpj += (min + rng.nextInt(max - min)).toString();
+      cnpj += (min + rng.nextInt(max - min)).toString();
     }
 
     if (invalid) {
-      fakeCnpj += (10 + rng.nextInt(99 - 10)).toString();
+      cnpj += (10 + rng.nextInt(99 - 10)).toString();
 
-      while (CnpjValidator.check(fakeCnpj)) {
-        fakeCnpj =
-            fakeCnpj.replaceRange(fakeCnpj.length - 2, fakeCnpj.length, '');
-        fakeCnpj += (10 + rng.nextInt(99 - 10)).toString();
+      while (CnpjValidator.check(cnpj)) {
+        cnpj = cnpj.replaceRange(cnpj.length - 2, cnpj.length, '');
+        cnpj += (10 + rng.nextInt(99 - 10)).toString();
       }
     } else {
-      fakeCnpj += CheckDigit.cnpj(fakeCnpj).toString();
+      cnpj += CheckDigit.cnpj(cnpj).toString();
     }
 
-    return formatted ? Format.cnpj(fakeCnpj) : fakeCnpj;
+    return formatted ? Cnpj().format(cnpj) : cnpj;
   }
 }

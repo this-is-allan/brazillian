@@ -1,9 +1,10 @@
-name: "documentos_brasil"
+name: brazillian
 version: 1.0.0
 author: Allan Carlos <allancarlosdeveloper@gmail.com>
-homepage:
-  - https://github.com/allancarlos123
+homepage: https://github.com/allancarlos123
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
 dependencies:
   meta: ^1.1.7
+dev_dependencies:
+  test: ^1.2.0

@@ -1,34 +1,33 @@
 import 'dart:math';
-import 'package:documentos_brasil/src/validators/cpf_validator.dart';
+import '../cpf.dart';
+import '../validators/cpf_validator.dart';
 
 import '../check_digit.dart';
-import '../format.dart';
 
-class CpfGenerator {
+class CpfGenerator extends Cpf {
   CpfGenerator();
 
   static String generateCpf(formatted, invalid) {
     var rng = new Random();
-    bool isValid;
     int min = 100;
     int max = 999;
-    String fakeCpf = "";
+    String cpf = "";
 
     for (var i = 1; i < 4; i++) {
-      fakeCpf += (min + rng.nextInt(max - min)).toString();
+      cpf += (min + rng.nextInt(max - min)).toString();
     }
 
     if (invalid) {
-      fakeCpf += (10 + rng.nextInt(99 - 10)).toString();
+      cpf += (10 + rng.nextInt(99 - 10)).toString();
 
-      while (CpfValidator.check(fakeCpf)) {
-        fakeCpf = fakeCpf.replaceRange(fakeCpf.length - 2, fakeCpf.length, '');
-        fakeCpf += (10 + rng.nextInt(99 - 10)).toString();
+      while (CpfValidator.check(cpf)) {
+        cpf = cpf.replaceRange(cpf.length - 2, cpf.length, '');
+        cpf += (10 + rng.nextInt(99 - 10)).toString();
       }
     } else {
-      fakeCpf += CheckDigit.cpf(fakeCpf).toString();
+      cpf += CheckDigit.cpf(cpf).toString();
     }
 
-    return formatted ? Format.cpf(fakeCpf) : fakeCpf;
+    return formatted ? Cpf().format(cpf) : cpf;
   }
 }

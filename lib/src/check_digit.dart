@@ -2,92 +2,89 @@ import 'format.dart';
 
 class CheckDigit {
   static cpf(String cpf) {
-    String _cpfFormatted = Format.removeSymbols(cpf);
-    String _digits;
-    int _sum = 0;
-    int _mod = 0;
+    String _cpf = Format.removeSymbols(cpf);
+    String digits;
+    int sum = 0;
+    int mod = 0;
 
     for (var i = 1; i <= 9; i++)
-      _sum = _sum + int.parse(_cpfFormatted.substring(i - 1, i)) * (11 - i);
+      sum = sum + int.parse(_cpf.substring(i - 1, i)) * (11 - i);
 
-    _mod = (_sum * 10) % 11;
+    mod = (sum * 10) % 11;
 
-    if (_mod == 10 || _mod == 11) _mod = 0;
+    if (mod == 10 || mod == 11) mod = 0;
 
-    _cpfFormatted = _cpfFormatted + _mod.toString();
-    _digits = _mod.toString();
-    _sum = 0;
-    _mod = 0;
+    _cpf = _cpf + mod.toString();
+    digits = mod.toString();
+    sum = 0;
+    mod = 0;
 
-    if (_cpfFormatted.length == 10) {
+    if (_cpf.length == 10) {
       for (var i = 1; i <= 10; i++)
-        _sum = _sum + int.parse(_cpfFormatted.substring(i - 1, i)) * (12 - i);
+        sum = sum + int.parse(_cpf.substring(i - 1, i)) * (12 - i);
     } else {
       for (var i = 1; i <= 10; i++)
-        _sum = _sum + int.parse(_cpfFormatted.substring(i - 1, i)) * (12 - i);
+        sum = sum + int.parse(_cpf.substring(i - 1, i)) * (12 - i);
     }
 
-    _mod = (_sum * 10) % 11;
+    mod = (sum * 10) % 11;
 
-    if (_mod == 10 || _mod == 11) _mod = 0;
+    if (mod == 10 || mod == 11) mod = 0;
 
-    _digits += _mod.toString();
+    digits += mod.toString();
 
-    return _digits;
+    return digits;
   }
 
   static cnpj(String cnpj) {
-    String _cnpjFormatted = Format.removeSymbols(cnpj);
-    String _digits;
-    int _sum = 0;
-    int _mod = 0;
-    int _multiplicar = 5;
+    String _cnpj = Format.removeSymbols(cnpj);
+    String digits;
+    int sum = 0;
+    int mod = 0;
+    int multiplicar = 5;
 
     for (var i = 1; i <= 12; i++) {
-      if (_multiplicar < 2) _multiplicar = 9;
+      if (multiplicar < 2) multiplicar = 9;
 
-      _sum =
-          _sum + int.parse(_cnpjFormatted.substring(i - 1, i)) * _multiplicar;
-      _multiplicar--;
+      sum = sum + int.parse(_cnpj.substring(i - 1, i)) * multiplicar;
+      multiplicar--;
     }
 
-    if (_sum % 11 < 2) {
-      _mod = 0;
+    if (sum % 11 < 2) {
+      mod = 0;
     } else {
-      _mod = 11 - (_sum % 11);
+      mod = 11 - (sum % 11);
     }
 
-    _cnpjFormatted = _cnpjFormatted + _mod.toString();
-    _digits = _mod.toString();
-    _multiplicar = 6;
-    _sum = 0;
-    _mod = 0;
+    _cnpj = _cnpj + mod.toString();
+    digits = mod.toString();
+    multiplicar = 6;
+    sum = 0;
+    mod = 0;
 
-    if (_cnpjFormatted.length == 13) {
+    if (_cnpj.length == 13) {
       for (var i = 1; i <= 13; i++) {
-        if (_multiplicar < 2) _multiplicar = 9;
+        if (multiplicar < 2) multiplicar = 9;
 
-        _sum =
-            _sum + int.parse(_cnpjFormatted.substring(i - 1, i)) * _multiplicar;
-        _multiplicar--;
+        sum = sum + int.parse(_cnpj.substring(i - 1, i)) * multiplicar;
+        multiplicar--;
       }
     } else {
       for (var i = 1; i <= 13; i++) {
-        if (_multiplicar < 2) _multiplicar = 9;
-        _sum =
-            _sum + int.parse(_cnpjFormatted.substring(i - 1, i)) * _multiplicar;
-        _multiplicar--;
+        if (multiplicar < 2) multiplicar = 9;
+        sum = sum + int.parse(_cnpj.substring(i - 1, i)) * multiplicar;
+        multiplicar--;
       }
     }
 
-    if (_sum % 11 < 2) {
-      _mod = 0;
+    if (sum % 11 < 2) {
+      mod = 0;
     } else {
-      _mod = 11 - (_sum % 11);
+      mod = 11 - (sum % 11);
     }
 
-    _digits += _mod.toString();
+    digits += mod.toString();
 
-    return _digits;
+    return digits;
   }
 }
