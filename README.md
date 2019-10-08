@@ -4,7 +4,7 @@
 [![Faker on pub](https://img.shields.io/pub/v/brazillian.svg)](https://pub.dartlang.org/packages/brazillian)
 
 
-A library for Dart that generates fake Brazillian data.
+A library for Dart that generates, validates and formats Brazilian data.
 
 ## Usage
 A simple usage example:
