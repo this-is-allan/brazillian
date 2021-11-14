@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0
+
+- Upgrade dependencies
+
 ## 1.0.0
 
 - Added cpf generator
