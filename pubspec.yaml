@@ -1,11 +1,10 @@
 name: brazillian
 version: 1.0.0
 description: A library to generate, validate and format Brazilian data, such as CPF, CNPJ, Phones, Currency and many other things.
-author: Allan Carlos <allancarlosdeveloper@gmail.com>
 homepage: https://github.com/this-is-allan/brazillian
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
 dependencies:
-  meta: ^1.1.7
+  meta: ^1.7.0
 dev_dependencies:
   test: ^1.8.0
